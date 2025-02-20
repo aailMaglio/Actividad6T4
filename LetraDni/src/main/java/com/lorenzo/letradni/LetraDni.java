@@ -41,6 +41,12 @@ public static String generarDNI() {
     char letra = AdivinarNumeroDNI(numero);
     return numero + "" + letra;
 }
+public static void pruebas() {
+    String[] dnis = {"12345678Z", "87654321X", "11111111H"};
+    for (String dni : dnis) {
+        System.out.println(dni + " es válido: " + ComprobarDNI(dni));
+    }
+}
 
 }
 }
