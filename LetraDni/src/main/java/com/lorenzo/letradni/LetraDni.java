@@ -4,6 +4,8 @@
 
 package com.lorenzo.letradni;
 
+import java.util.Random;
+
 /**
  *
  * @author lollo
@@ -31,5 +33,14 @@ public class LetraDni {
         int numeroDNI = 12345678;
         System.out.println("La letra del DNI es: " + AdivinarNumeroDNI(numeroDNI));
     }
+    
+
+public static String generarDNI() {
+    Random random = new Random();
+    int numero = random.nextInt(100000000);
+    char letra = AdivinarNumeroDNI(numero);
+    return numero + "" + letra;
+}
+
 }
 }
